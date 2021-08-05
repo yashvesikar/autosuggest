@@ -1,10 +1,13 @@
 import os
 import sqlite3
 
-filename = "user-ct-test-collection-01.txt"
+import urllib.request
+filepath = "./data/user-ct-test-collection-01.txt"
+urllib.request.urlretrieve('http://www.cim.mcgill.ca/~dudek/206/Logs/AOL-user-ct-collection/user-ct-test-collection-01.txt', filepath)
+
 DB_NAME = 'dashworks.db'
 
-fp = open(f"./data/{filename}")
+fp = open(filepath)
 fp.readline()  # Skip the first line
 
 CREATE_DB = not os.path.isfile(DB_NAME)
@@ -25,5 +28,5 @@ if (CREATE_DB):
   con.commit()
   print("Successfully created dashworks.db")
 
-for row in cur.execute('SELECT * FROM collection'):
+for row in cur.execute('SELECT * FROM collection LIMIT 100'):
   print(row)
