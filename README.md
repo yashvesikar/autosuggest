@@ -6,6 +6,7 @@ Assumes user has python 3.8+ installed
 2. pip install flask_cors
 3. python process_data.py
 4. python main.py
+
 Api starts on http://localhost:5000/autosuggest
 
 ## dw-web
