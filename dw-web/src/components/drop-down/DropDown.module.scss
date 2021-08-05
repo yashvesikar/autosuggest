@@ -1,0 +1,21 @@
+.dropDownContainer {
+  margin: 10px 0 0;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0, rgba(0, 0, 0, 0.1) 0px 4px 11px;
+  border-radius: 5px;
+  // width: 40%;
+}
+
+.listContainer {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+}
